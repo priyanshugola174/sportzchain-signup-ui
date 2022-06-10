@@ -1,0 +1,112 @@
+.logo {
+    display: block;
+    margin: 0px;
+    width: 100%;
+    height: 100%;
+    border-radius: 0px;
+}
+
+.custom-logo {
+    margin-top: 0px;
+    height: 103px;
+    width: 325px;
+}
+
+.text-content {
+    display: block;
+}
+
+.margin-vertical-20 {
+    margin: 20px auto;
+}
+
+.sponser-container {
+    height: 87px;
+    width: 75px;
+}
+
+.sponser-img {
+    width: 83px;
+    height: 70px;
+}
+
+.footer-text {
+    font-size: 14px;
+}
+
+.width400 {
+    width: 400px;
+    margin: auto;
+}
+
+.copyrightcontainer {
+    display: grid;
+    grid-template-columns: 15% 15% 10% 60%;
+    font-size: 12px;
+}
+
+.textalignend {
+    text-align: center;
+    cursor: pointer;
+    color: white;
+}
+
+.textalignend a {
+    color: white;
+    text-decoration: none;
+}
+
+.about-us {
+    margin-left: 10rem;
+}
+
+.tos {
+    margin-left: 2rem;
+}
+
+.privacy {
+    margin-left: 1rem;
+}
+
+.partnerscontainer {
+    display: grid;
+    grid-template-rows: auto;
+    margin-bottom: 30px;
+}
+
+.partnertitle {
+    font-size: 40px;
+    font-family: 'Zonapro';
+}
+
+.footertext {
+    font-size: small;
+}
+
+@media all and (max-width: 768px) {
+    .width400 {
+        width: auto;
+        margin: auto;
+    }
+    .copyrightcontainer {
+        display: grid;
+        grid-template-columns: auto;
+        grid-template-rows: auto;
+        text-align: center;
+    }
+    /* .textalignend {
+        text-align: center;
+        margin: 15px 0px;
+        cursor: pointer;
+        border: 1px solid;
+    } */
+    .textalignend {
+        text-align: justify;
+        cursor: pointer;
+        color: white;
+    }
+    
+    .mobileview50 {
+        width: 50%;
+    }
+}

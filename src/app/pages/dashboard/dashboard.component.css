@@ -1,0 +1,268 @@
+.title {
+    font-size: 50px;
+    font-weight: bold;
+    font-family: "Zonapro";
+}
+
+.sub-title {
+    font-size: 23px;
+    font-weight: 600;
+    font-family: "Zonapro";
+}
+
+.wrapper {
+    max-width: 300px;
+    margin: 0 auto;
+    font: normal 14px sans-serif;
+}
+
+.wrapper .targe-date {
+    text-align: center;
+}
+
+.wrapper .description,
+.wrapper .times {
+    display: flex;
+}
+
+.wrapper .description>p,
+.wrapper .times>p {
+    width: 25%;
+    margin: 10px 0 0 0;
+    text-align: center;
+}
+
+.wrapper .times {
+    font-size: 22px;
+}
+
+.card-img-top {
+    padding: 10px;
+    /* width: 100%;
+height: 254.868px; */
+}
+
+.card {
+    background-color: none !important;
+}
+
+.sub-text {
+    font-size: 16px;
+    font-weight: 600;
+}
+
+.reward-container {
+    background: radial-gradient(circle at 10% 10%, rgba(71, 71, 71, 0.35) 0%, rgba(71, 71, 71, 0.35) 100%);
+    border-radius: 5px;
+    padding: 15px;
+}
+
+.orange-text {
+    color: rgb(251, 98, 64);
+}
+
+.reward-content {
+    height: 150px;
+}
+
+@media only screen and (max-width: 991px) {
+    .reward-content {
+        height: 500px;
+    }
+    .custom-control {
+        width: 50%;
+    }
+}
+
+.all-button {
+    background: -webkit-linear-gradient(left, rgb(232, 150, 46) 0%, rgb(228, 81, 49) 100%);
+    color: white;
+    width: 150px;
+}
+
+.error-message-container {
+    background: -webkit-linear-gradient(left, rgb(232, 150, 46) 0%, rgb(228, 81, 49) 100%);
+    color: white;
+    border-radius: 5px;
+}
+
+.all-button-green {
+    background: none rgb(6, 134, 3);
+    color: white;
+    width: 150px;
+    cursor: text;
+}
+
+.all-button-pending {
+    background: grey;
+    color: white;
+    width: 150px;
+    cursor: text;
+}
+
+.social-media-img {
+    height: 50px;
+}
+
+.custom-control {
+    border: 2px solid rgb(255, 255, 255) !important;
+    background: none transparent !important;
+    color: rgb(255, 255, 255) !important;
+    width: 100%;
+    border-radius: 10px;
+    height: 30px;
+}
+
+.copy {
+    margin-left: 10px;
+    cursor: pointer;
+}
+
+.social-media-rectangle {
+    height: 46px;
+    width: 116px;
+}
+
+.ml-2 {
+    margin-left: 20px;
+}
+
+.accordin-heading {
+    background-color: none !important;
+    background: none;
+    color: white;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+.card {
+    background-color: transparent !important;
+}
+
+.cursor-pointer {
+    cursor: pointer;
+}
+
+.external-link {
+    color: white;
+    margin-left: 5px;
+}
+
+li {
+    display: inline-block;
+    font-size: 1.5em;
+    list-style-type: none;
+    padding: 1em;
+    text-transform: uppercase;
+}
+
+li span {
+    display: block;
+    font-size: 4.5rem;
+}
+
+.faqmargin {
+    margin: 100px 150px 50px 150px !important;
+}
+
+.countdowntimer {
+    margin: auto;
+    padding: 0;
+}
+
+@media all and (max-width: 768px) {
+    h1 {
+        font-size: calc(1.5rem * var(--smaller));
+    }
+    li {
+        font-size: calc(1.125rem * var(--smaller));
+    }
+    li span {
+        font-size: calc(3.375rem * var(--smaller));
+    }
+    .faqmargin {
+        margin: 10px auto !important;
+    }
+    .card {
+        width: 75%;
+        margin: auto;
+        padding: 10px;
+    }
+    .timertext {
+        font-size: 1.5rem;
+    }
+    .ul-text {
+        display: flex;
+        flex-wrap: wrap;
+        row-gap: 10px;
+    }
+    .collectibles-ml-40 {
+        margin-left: 1em !important;
+    }
+}
+
+@media all and (max-width: 575px) {
+    .noshowmobile {
+        display: none;
+    }
+}
+
+.collectibles-ml-40 {
+    margin-left: 1em;
+}
+
+.ul-text {
+    display: flex;
+    flex-wrap: wrap;
+    row-gap: 10px;
+    flex-direction: column;
+}
+
+.li-text {
+    flex: 1 1 auto;
+    padding: 5px !important;
+    text-transform: none;
+    font-size: 16px !important;
+    font-weight: 600;
+}
+
+.text-16 {
+    font-size: 16px !important;
+    font-weight: 600;
+}
+
+.ul-div-container {
+    display: flex;
+    justify-content: start;
+    margin-top: 40px;
+}
+
+.benefit-list-img {
+    width: 25px;
+    margin: 5px;
+}
+
+.margin-top-10rem {
+    margin-top: 5rem;
+}
+
+.margin-right-10 {
+    margin-right: 10px;
+}
+
+.margin-left-5vh {
+    margin-left: 5vh;
+}
+
+.coming-soon-position {
+    position: absolute;
+}
+
+@media all and (max-width: 575px) {
+    .margin-top-10rem {
+        margin-top: 2rem;
+    }
+    .margin-left-5vh {
+        margin-left: 1vh;
+    }
+}

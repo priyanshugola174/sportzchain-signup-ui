@@ -1,0 +1,76 @@
+<!-- d-flex justify-content-center align-items-center -->
+<div class="form-container ml-2">
+    <div class="d-flex justify-content-center align-items-center">
+        <i class="fa fa-sign-in fa-2x margin-right-icon" aria-hidden="true"></i>
+        <!-- <i class="fa fa-user-plus fa-2x margin-right-icon"></i> -->
+        <div class="ml-2">Log In Here</div>
+    </div>
+
+    <!-- <i class="fa fa-american-sign-language-interpreting fa-3x" aria-hidden="true"> </i> -->
+    <form [formGroup]="signInForm" (ngSubmit)="onSubmit()">
+        <div class="form-group mt-2">
+            <label for="email">Email</label>
+            <input type="email" formControlName="emailAddress" class="form-control custom-control" id="email" aria-describedby="emailHelp" placeholder="Enter Email Address" />
+        </div>
+
+        <div class="form-group mt-2">
+            <label for="intialPassword">Password</label>
+            <input type="password" formControlName="userPassword" class="form-control custom-control" id="intialPassword" placeholder="Enter Password" />
+        </div>
+
+        <div class="row">
+            <div class="col-lg-6">
+                <div class="form-group mt-2 form-check">
+                    <input type="checkbox" class="form-check-input" id="agreementCheck" />
+                    <label class="form-check-label" for="agreementCheck">Remember me</label>
+                </div>
+            </div>
+            <div class="col-lg-6 forgot-password d-flex justify-content-end align-items-end">
+                <a class="forgot-password" [routerLink]="['/reset-password']">Forgot password?</a>
+            </div>
+        </div>
+
+        <div class=" row mt-4 ">
+            <div class="col-lg-4 ">
+                <button type="submit " class="mt-2 btn btn-sm all-button margin-right ">
+                    <div *ngIf="isLoading " class="spinner-border spinner-border-sm text-warning " role="status ">
+                        <span class="sr-only ">Loading...</span>
+                    </div>
+                    Log In
+                </button>
+            </div>
+            <div class="col-lg-4 ">
+                <div class="d-flex justify-content-end align-items-end ">
+                    <div class="mt-2 login-text ">Don't have an account?</div>
+                </div>
+            </div>
+            <div class="col-lg-4 ">
+                <button type="button " (click)="signUpClick() " class="mt-2 btn btn-sm all-button ">Sign up</button>
+            </div>
+        </div>
+        <div class="form-group mt-2">
+            <small style="font-size:10px">
+                This site is protected by reCAPTCHA and the Google
+                <a href="https://policies.google.com/privacy">Privacy Policy</a> and
+                <a href="https://policies.google.com/terms">Terms of Service</a> apply.
+            </small>
+        </div>
+    </form>
+    <!-- <div class="mt-2 d-flex justify-content-center align-items-center ">
+        ----------------- or -----------------
+    </div>
+
+    <div class="container mt-2 ">
+        <div class="row ">
+          <div class="col ">
+            <img src="../../../assets/static/sign_in_google.png " class="google-social-button " />
+          </div>
+          <div class="col ">
+            
+          </div>
+          <div class="col ">
+            <img src="../../../assets/static/fb_signin.png "  class="facebook-social-button " />
+          </div>
+        </div>
+    </div> -->
+</div>

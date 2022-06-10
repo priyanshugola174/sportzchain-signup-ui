@@ -1,0 +1,173 @@
+<div class="container">
+  <div class="row mt-4 mb-4">
+    <div class="col-lg-12">
+      <nav class="navbar navbar-expand-lg navbar-light justify-content-end">
+        <ul class="nav mobile-view-center-ul">
+          <li class="nav-item">
+            <a class="nav-link" (click)="activeContainer('profile')" href="javascript:void(0)">Profile</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" (click)="activeContainer('rewardActivity')" href="javascript:void(0)">Reward
+              Activity</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" (click)="activeContainer('changePassword')" href="javascript:void(0)">Change
+              Password</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" (click)="activeContainer('referFriends')" href="javascript:void(0)">Refer Friends</a>
+          </li>
+        </ul>
+      </nav>
+    </div>
+  </div>
+
+  <app-change-password *ngIf="currentContainer == 'changePassword'"></app-change-password>
+
+  <app-reward-history *ngIf="currentContainer == 'rewardActivity'"></app-reward-history>
+
+  <app-refer-friends [profileInfo]="profileInfo.profile" *ngIf="currentContainer == 'referFriends' && isDataLoaded">
+  </app-refer-friends>
+
+  <div class="row mt-4 form-container" *ngIf="currentContainer == 'profile'">
+    <div class="d-flex justify-content-start align-items-start">
+      <i class="fa fa-user-plus fa-2x margin-right-icon" aria-hidden="true"></i>
+      <div class="ml-2 sub-title">My Profile</div>
+    </div>
+    <form [formGroup]="profileForm" (ngSubmit)="onUpdate()">
+      <div class="container">
+        <div class="row mt-2">
+          <div class="col-lg-6">
+            <div class="form-group mt-2">
+              <label class="displaylabel" for="displayName">Display Name</label>
+              <input required type="text" formControlName="displayname" class="form-control custom-control"
+                id="displayName" aria-describedby="displayName" placeholder="Enter Display Name" readonly />
+            </div>
+          </div>
+          <div class="col-lg-6">
+            <div class="form-group mt-2">
+              <label class="displaylabel" for="walletAddress">ERC20 Wallet Address
+                <i class="fa fa-question-circle cursor-pointer" (click)="showWalletTooltip()" aria-hidden="true"></i>
+                <div class="tooltip-tutorial">
+                  <a href="https://www.youtube.com/watch?v=Af_lQ1zUnoM" target="_blank">How to create a wallet?</a>
+                </div>
+              </label>
+
+              <input type="text" formControlName="walletaddress" class="form-control custom-control" id="walletAddress"
+                aria-describedby="walletAddress" placeholder="Enter Wallet Address" />
+              <small id="walletHelp" *ngIf="showWalletTooltipInfo" class="">
+                Please note this is the wallet address in which your $SPN tokens will be dropped.</small>
+            </div>
+          </div>
+        </div>
+
+        <div class="row mt-2">
+          <div class="col-lg-6">
+            <div class="form-group mt-2">
+              <label class="displaylabel" for="age">Age</label>
+              <input type="text" formControlName="age" class="form-control custom-control" id="age"
+                aria-describedby="age" placeholder="Enter Age" maxlength="2" />
+            </div>
+          </div>
+          <div class="col-lg-6">
+            <span class="sub-text"> Gender </span>
+            <div class="form-check form-check-inline mt-4 ml-2">
+              <input formControlName="gender" class="form-check-input" type="radio" value="M" />
+              <label class="form-check-label" for="inlineRadio1">Male</label>
+            </div>
+            <div class="form-check form-check-inline mt-4 ml-2">
+              <input formControlName="gender" class="form-check-input" type="radio" value="F" />
+              <label class="form-check-label" for="inlineRadio2">Female</label>
+            </div>
+          </div>
+        </div>
+
+        <div class="row">
+          <div class="col-lg-6">
+            <div class="form-group mt-2">
+              <label class="displaylabel" for="country">Country</label>
+              <select formControlName="country" class="form-select custom-control" aria-label="Default select example">
+                <option *ngFor="let country of this.countryList" [value]="country.code"
+                  [selected]="country == country.code ? true : null">
+                  {{ country.name }}
+                </option>
+              </select>
+            </div>
+          </div>
+          <div class="col-lg-6">
+            <div class="form-group mt-2">
+              <label class="displaylabel" for="bio">Bio</label>
+              <input type="text" formControlName="bio" class="form-control custom-control" id="bio"
+                aria-describedby="bio" placeholder="Enter Bio" />
+            </div>
+          </div>
+        </div>
+
+        <div class="d-flex justify-content-start align-items-start">
+          <div class="ml-2 sub-title-social">Social Profile</div>
+        </div>
+
+        <div class="row">
+          <div class="col-lg-6">
+            <div class="form-group mt-2">
+              <label class="displaylabel" for="facebookUserName">Facebook username</label>
+              <input formControlName="facebook" type="text" class="form-control custom-control" id="facebookUserName"
+                aria-describedby="facebookUserName" placeholder="Enter Facebook Username" />
+            </div>
+          </div>
+          <div class="col-lg-6">
+            <div class="form-group mt-2">
+              <label class="displaylabel" for="twitterUserName">Twitter Username</label>
+              <input formControlName="twitter" type="text" class="form-control custom-control" id="twitterUserName"
+                aria-describedby="twitterUserName" placeholder="Enter Your Twitter Username" />
+            </div>
+          </div>
+        </div>
+
+        <div class="row">
+          <div class="col-lg-6">
+            <div class="form-group mt-2">
+              <label class="displaylabel" for="instagramUserName">Instagram username</label>
+              <input formControlName="instagram" type="text" class="form-control custom-control" id="instagramUserName"
+                aria-describedby="instagramUserName" placeholder="Enter Instagram Username" />
+            </div>
+          </div>
+          <div class="col-lg-6">
+            <div class="form-group mt-2">
+              <label class="displaylabel" for="telegramUserName">Telegram username</label>
+              <input formControlName="telegram" type="text" class="form-control custom-control" id="telegramUserName"
+                aria-describedby="telegramUserName" placeholder="Enter Your Telegram Username" />
+            </div>
+          </div>
+        </div>
+
+        <div class="row">
+          <div class="col-lg-6">
+            <div class="form-group mt-2">
+              <label class="displaylabel" for="discordUserName">Discord username</label>
+              <input formControlName="discord" type="text" class="form-control custom-control" id="discordUserName"
+                aria-describedby="discordUserName" placeholder="Enter Discord Username" />
+            </div>
+          </div>
+          <div class="col-lg-6"></div>
+        </div>
+
+        <div class="row mt-4">
+          <div class="col-lg-12 d-flex justify-content-center align-items-center">
+            <button type="submit" class="btn btn-sm all-button update-button">
+              <div *ngIf="isLoading" class="spinner-border spinner-border-sm text-warning" role="status">
+                <span class="sr-only">Loading...</span>
+              </div>
+              Update Profile
+            </button>
+          </div>
+        </div>
+      </div>
+    </form>
+  </div>
+  <div class="row mt-4 mb-2 reward-container">
+    <div class="col-lg-12 mt-4">
+      <hr />
+    </div>
+  </div>
+</div>

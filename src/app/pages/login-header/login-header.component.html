@@ -1,0 +1,43 @@
+<div class="container">
+    <div class="row mt-4 mb-4">
+        <div class="col-lg-4 custom-logo">
+            <a [routerLink]="['/home']">
+                <img src="../../../assets/static/sportzchain_newlogo.png" class="logo" />
+            </a>
+        </div>
+        <div class="col-lg-8 header-menu-right-align">
+            <nav class="navbar navbar-expand-lg navbar-light justify-content-end">
+                <ul class="nav mobile-view-center-ul">
+                    <li (click)="menuClick('home')" class="nav-item">
+                        <a class="nav-link" href="javascript:void(0)">Home</a>
+                    </li>
+                    <li (click)="menuClick('collectibles')" class="nav-item">
+                        <a class="nav-link" href="javascript:void(0)">Collectibles</a>
+                    </li>
+                    <li (click)="menuClick('claim')" class="nav-item">
+                        <a class="nav-link" href="javascript:void(0)">Rewards & Referrals</a>
+                    </li>
+                    <li (click)="menuClick('faq')" class="nav-item">
+                        <a class="nav-link" href="javascript:void(0)">FAQs</a>
+                    </li>
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                            <i class="fa fa-user-circle fa-4 margin-right"></i> {{ currentName }}
+                        </a>
+                        <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+                            <li>
+                                <a routerLink="/profile" class="dropdown-item" href="#">Profile</a>
+                            </li>
+                            <li>
+                                <hr class="dropdown-divider" />
+                            </li>
+                            <li>
+                                <a (click)="onLogout()" class="dropdown-item" href="#">Logout</a>
+                            </li>
+                        </ul>
+                    </li>
+                </ul>
+            </nav>
+        </div>
+    </div>
+</div>

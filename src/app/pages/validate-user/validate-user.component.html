@@ -1,0 +1,46 @@
+<div class="container">
+    <div class="row">
+        <div class="col-lg-3"></div>
+        <div class="col-lg-6">
+            <div class="form-container ml-2">
+                <div class="d-flex justify-content-center align-items-center">
+                    <!-- <i class="fa fa-sign-in fa-2x margin-right-icon" aria-hidden="true"></i> -->
+                    <i class="fa fa-key fa-2x margin-right-icon"></i>
+                    <div class="ml-2 sub-title">Verify OTP</div>
+                </div>
+                <div class="mt-2 d-flex justify-content-center align-items-center">
+                    Your registration is successful! Please check your email
+                </div>
+
+                <div class="form-group mt-4 mb-2">
+                    <label for="otp">Enter the OTP received in email</label>
+                    <input type="text" [(ngModel)]="otp" class="form-control custom-control mt-2" id="otp" aria-describedby="otpHelp" placeholder="Enter OTP received in email" />
+                </div>
+                <div class="float-container">
+                    <div class="col-lg-8 mt-2 mb-2 sub-text d-flex justify-content-center align-items-center float-child">
+                        <div *ngIf="loading.resend" class="spinner-border spinner-border-sm text-warning" role="status">
+                            <span class="sr-only">Loading...</span>
+                        </div>
+                        <a class="otp-resend" (click)="resendCode()">
+              Not Received yet? resend again
+            </a>
+                    </div>
+
+                    <div class="float-child">
+                        <button type="button" (click)="validateOtp()" class="btn btn-sm all-button margin-right">
+              <div
+                *ngIf="loading.otp"
+                class="spinner-border spinner-border-sm text-warning"
+                role="status"
+              >
+                <span class="sr-only">Loading...</span>
+              </div>
+              Submit
+            </button>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="col-lg-3"></div>
+    </div>
+</div>

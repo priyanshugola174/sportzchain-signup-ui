@@ -1,0 +1,20 @@
+<div class="container">
+    <div class="row">
+        <div class="col-lg-7">
+            <div >
+                <img  id="home-image" src="assets/static/welcome.png"/>
+            </div>
+            <div id="home-text">
+                <p class="big-title-info">
+                    Join hands to revolutionize the way we define fan engagement through sports tokens and NFTs
+                </p>
+            </div>
+        </div>
+        <div class="col-lg-5">
+            <div *ngIf="!isLoggedIn">
+                <app-sign-up (signInClicked)="signInClickHandler($event)" *ngIf="isSignUp"></app-sign-up>
+                <app-sign-in (signUpClicked)="signUpClickHandler($event)" *ngIf="!isSignUp"></app-sign-in>
+            </div>
+        </div>
+    </div>
+</div>

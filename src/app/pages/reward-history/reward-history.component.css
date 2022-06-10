@@ -1,0 +1,58 @@
+.title {
+  font-size: 50px;
+  font-weight: bold;
+}
+
+.sub-title {
+  font-size: 23px;
+  font-weight: 600;
+}
+
+.reward-container {
+  background: radial-gradient(
+    circle at 10% 10%,
+    rgba(71, 71, 71, 0.35) 0%,
+    rgba(71, 71, 71, 0.35) 100%
+  );
+  border-radius: 5px;
+  padding: 15px;
+  width: 100%;
+}
+
+.custom-control {
+  border: 2px solid rgb(255, 255, 255) !important;
+  background: none transparent !important;
+  color: rgb(255, 255, 255) !important;
+  width: 500px;
+  border-radius: 10px;
+  height: 30px;
+}
+
+.copy {
+  margin-left: 10px;
+  cursor: pointer;
+}
+
+.social-media-rectangle {
+  height: 46px;
+  width: 116px;
+}
+
+.ml-2 {
+  margin-left: 20px;
+}
+
+.table {
+  color: white;
+}
+
+@media only screen and (max-width: 768px) {
+  .hide-mobile-view {
+    display: none;
+  }
+  .reward-container {
+    width: 100%;
+    padding: 5%;
+    margin: auto;
+  }
+}

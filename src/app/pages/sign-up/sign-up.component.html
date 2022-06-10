@@ -1,0 +1,92 @@
+<!-- d-flex justify-content-center align-items-center -->
+<div class="form-container ml-2">
+    <div class="d-flex">
+        <i class="fa fa-user-plus fa-2x margin-right-icon"></i>
+        <div class="ml-2 text-center margin-right-text">Sign up Now!!!</div>
+    </div>
+
+    <!-- <i class="fa fa-american-sign-language-interpreting fa-3x" aria-hidden="true"> </i> -->
+    <form [formGroup]="signUpForm" (ngSubmit)="onSubmit()" class="needs-validation" novalidate>
+        <div class="form-group mt-2">
+            <label for="displayName">Display Name</label>
+            <input required type="text" formControlName="displayName" class="form-control custom-control" id="displayName" aria-describedby="displayName" placeholder="Enter Display Name" maxlength="30" />
+            <div class="invalid-feedback">Please enter a display name</div>
+        </div>
+
+        <div class="form-group mt-2">
+            <label for="email">Email address</label>
+            <input required type="email" formControlName="emailAddress" class="form-control custom-control" id="email" aria-describedby="emailHelp" placeholder="Enter Email Address" />
+            <div class="invalid-feedback">Please enter a valid email address</div>
+        </div>
+
+        <div class="form-group mt-2">
+            <label for="intialPassword">Password</label>
+            <input required type="password" formControlName="intialPassword" class="form-control custom-control" id="intialPassword" placeholder="Enter Password" maxlength="15" />
+            <small id="passwordHelp" class="form-text font-text-custom text-muted">Minumum length of 8 with special character
+        and alphanumeric characters</small>
+            <div ng-show="signupFrm.intialPassword.$error.pattern && signupFrm.intialPassword.$invalid" class="invalid-feedback">Please enter a valid password</div>
+        </div>
+
+        <div class="form-group mt-2">
+            <label for="confirmPassword">Confirm Password</label>
+            <input required type="password" formControlName="confirmPassword" class="form-control custom-control" id="confirmPassword" placeholder="Enter Same Password" />
+            <div class="invalid-feedback">Please enter confirm password</div>
+            <!-- {{f.confirmPassword.errors | json}} -->
+            <!-- <div *ngIf="f.confirmPassword.errors.required">Confirm Password is required</div>
+            <div *ngIf="f.confirmPassword.errors.mustMatch">Password and confirm not match</div> -->
+            <!-- <small id="emailHelp" class="form-text text-muted">Password length should be alphanumeric and between 8 to 15</small> -->
+        </div>
+
+        <div class="form-group mt-2 form-check">
+            <input required type="checkbox" formControlName="agreementCheck" value="I agree to terms and conditions" class="form-check-input" id="agreementCheck" />
+            <label class="form-check-label" for="agreementCheck">I agree to terms and conditions</label>
+            <div class="invalid-feedback">You must agree before submitting.</div>
+        </div>
+        <br>
+        <a class="promo-link d-flex mt-2" *ngIf="showPromoOption" (click)="showPromoCode()">
+      Have a referral code or promo code?
+    </a>
+
+        <div class="form-group mt-2" *ngIf="isPromo">
+            <!-- <label for="promoCode">Promo Code</label> -->
+            <input type="text" formControlName="promoCode" class="form-control custom-control promo-code" id="promoCode" aria-describedby="Promo Code" placeholder="Enter Promo Code" />
+            <div (click)="closePromo()" class="promo-code-close">X</div>
+        </div>
+        <!--<div class="row mt-3">
+            <div class="col-sm-12 mb-2">
+                <re-captcha id="recaptcha" name="recaptcha" #recaptcha="ngModel" [(ngModel)]="token" required [class.is-invalid]="recaptcha.invalid && (recaptcha.dirty || recaptcha.touched)"></re-captcha>
+                <div *ngIf="recaptcha.invalid && (recaptcha.dirty || recaptcha.touched)" class="invalid-feedback">
+                <div *ngIf="recaptcha.errors?.['required']">This field is required.</div>
+                </div>
+            </div>
+        </div>-->
+       
+        <div class="row mt-4">
+            <div class="col-lg-4">
+                <button type="submit" class="btn btn-sm all-button margin-right">
+                    <div *ngIf="isLoading" class="spinner-border spinner-border-sm text-warning" role="status">
+                        <span class="sr-only">Loading...</span>
+                    </div>
+                    Sign Up
+                </button>
+            </div>
+            <div class="col-lg-4">
+                <div class="d-flex existing-user">
+                    <div class="mt-2 login-text">Existing User?</div>
+                </div>
+            </div>
+            <div class="col-lg-4">
+                <button (click)="signInClick()" type="button" class="btn btn-sm all-button">
+                Log In
+                </button>
+            </div>
+        </div>
+        <div class="form-group mt-2">
+            <small style="font-size:10px">
+                This site is protected by reCAPTCHA and the Google
+                <a href="https://policies.google.com/privacy">Privacy Policy</a> and
+                <a href="https://policies.google.com/terms">Terms of Service</a> apply.
+            </small>
+        </div>
+    </form>
+</div>

@@ -1,0 +1,98 @@
+.form-container {
+  width: 100%;
+  background: radial-gradient(
+    circle at 10% 10%,
+    rgba(71, 71, 71, 0.35) 0%,
+    rgba(48, 48, 48, 0.07) 100%
+  );
+  border-radius: 10px;
+  /* position: absolute; */
+  box-sizing: border-box;
+  display: block;
+  padding-left: 20px;
+  /* margin-left:5%; */
+}
+
+.font-text-custom {
+  font-size: 0.6em !important;
+}
+
+.promo-link {
+  text-decoration: underline;
+  display: block;
+  cursor: pointer;
+  color: white;
+}
+
+.all-button {
+  background: -webkit-linear-gradient(
+    left,
+    rgb(232, 150, 46) 0%,
+    rgb(228, 81, 49) 100%
+  );
+  color: white;
+  width: 100%;
+  font-weight: 600;
+}
+
+.margin-right {
+  margin-right: 10%;
+}
+
+.custom-control {
+  border: 2px solid rgb(255, 255, 255) !important;
+  background: none transparent !important;
+  color: rgb(255, 255, 255) !important;
+}
+
+.margin-right-icon {
+  padding: 1em 0em 0em 0em;
+  margin-right: 10px;
+}
+
+.margin-right-text {
+  padding: 2em 0em 0em 0em;
+}
+
+.google-social-button {
+  height: 30px;
+  cursor: pointer;
+}
+
+.facebook-social-button {
+  height: 25px;
+  cursor: pointer;
+}
+
+.promo-code {
+  width: 90%;
+  display: inline-block;
+}
+
+.promo-code-close {
+  width: 5%;
+  margin-left: 3%;
+  display: inline-block;
+  cursor: pointer;
+  color: red;
+}
+
+.login-text {
+  font-size: 11px;
+}
+
+.existing-user {
+  padding-left: 4rem;
+}
+
+@media only screen and (max-width: 768px) {
+  .existing-user {
+    padding-left: 0rem;
+    margin-bottom: 5px;
+  }
+}
+
+re-captcha.is-invalid > div {
+  border: 1px solid #dc3545 !important;
+  border-radius: 0.2rem;
+}

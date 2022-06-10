@@ -1,0 +1,12 @@
+<div class="pagecontainer">
+  <div class="header">
+    <app-login-header *ngIf="isShowMenu()"></app-login-header>
+    <app-header *ngIf="!isShowMenu()"></app-header>
+  </div>
+  <div class="pagecontent">
+    <router-outlet></router-outlet>
+  </div>
+  <div class="footer">
+    <app-footer></app-footer>
+  </div>
+</div>

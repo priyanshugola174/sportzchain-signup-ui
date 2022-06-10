@@ -1,0 +1,137 @@
+/* You can add global styles to this file, and also import other style files */
+
+@font-face {
+    font-family: "Zonapro";
+    src: local("zonapro-regular"), url(./assets/fonts/zonapro-regular.otf) format("truetype");
+}
+
+html,
+body {
+    width: 100%;
+    height: 100%;
+    font-family: "Inter";
+    src: local("Inter-Regular"), url(./assets/fonts/Inter-Regular.ttf) format("truetype");
+}
+
+.body-bg {
+    background-image: url('assets/static/background.png');
+    background-color: rgb(0, 0, 0);
+    background-repeat: no-repeat;
+    background-size: cover;
+    width: 100%;
+    height: 100%;
+    color: white;
+    font-family: 'Inter';
+}
+
+::-webkit-scrollbar {
+    width: 8px;
+}
+
+
+/* Track */
+
+::-webkit-scrollbar-track {
+    box-shadow: inset 0 0 5px grey;
+    border-radius: 5px;
+}
+
+
+/* Handle */
+
+::-webkit-scrollbar-thumb {
+    background: grey;
+    border-radius: 5px;
+}
+
+
+/* Handle on hover */
+
+::-webkit-scrollbar-thumb:hover {
+    background: #2e2a2a;
+}
+
+.card {
+    background-color: none !important;
+}
+
+.carousel-control-prev {
+    left: -10% !important;
+}
+
+.carousel-control-next {
+    right: -10%;
+}
+
+.accordion-item {
+    background-color: none !important;
+}
+
+.custom-control {
+    border: 2px solid rgb(255, 255, 255) !important;
+    background: none transparent !important;
+    color: rgb(255, 255, 255) !important;
+    width: 80% !important;
+}
+
+@media only screen and (max-width: 768px) {
+    .carousel-control-prev {
+        left: 0% !important;
+    }
+
+    .carousel-control-next {
+        right: 0% !important;
+    }
+}
+
+@media only screen and (max-width: 768px) {
+    .row>* {
+        text-align: left
+    }
+
+    .mobile-view-center-ul {
+        display: flex;
+        justify-content: flex-end;
+    }
+
+    .custom-control {
+        width: 100% !important;
+    }
+
+    .form-container {
+        max-width:  100%;
+        background: radial-gradient(circle at 10% 10%,
+                rgba(71, 71, 71, 0.35) 0%,
+                rgba(48, 48, 48, 0.07) 100%);
+        border-radius: 10px;
+        /* position: absolute; */
+        box-sizing: border-box;
+        display: block;
+        padding: 0 18px;
+        /* margin-left:5%; */
+    }
+    .copyrightcontainer.footer_link_wrap .textalignend {
+        text-align: unset;
+        margin: 0;
+        width: 100%;
+        max-width: 32%;
+        margin-bottom: 15px;
+    }
+    
+    .copyrightcontainer.footer_link_wrap {
+        display: flex !important;
+        flex-wrap: wrap;
+        width: 100%;
+        align-items: center;
+    }
+    
+    .copyrightcontainer.footer_link_wrap .footertext {
+        padding-left: 10px;
+        padding-right: 10px;
+    }
+    
+}
+
+.grecaptcha-badge {
+    visibility: hidden;
+}

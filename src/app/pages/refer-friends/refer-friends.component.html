@@ -1,0 +1,67 @@
+<div class="referralcontainer">
+    <div class="row1">
+        <div class="subheader mt-4" style="text-align: left;">
+            <p>SPORTZCHAIN Referral Program</p>
+        </div>
+    </div>
+    <div class="row2">
+        <div class="shareyourlink box-container">
+            <div class="shareyourlinktitle mt-4"><span>Share Your Link & Earn More $SPN!!!</span></div>
+
+            <div class="urlcopy mt-4">
+                <input type="text" [value]="referralcode" class="form-control custom-control" id="referalLink" aria-describedby="emailHelp" />
+                <!--<i (click)="copyMessage()" class="copy fa fa-files-o" aria-hidden="true"></i>-->
+            </div>
+            <div class="socialbuttons mt-4">
+                <div class="socialitems">
+                    <img (click)="facebookShare()" src="../../../assets/static/facebook_rectangle.png" class="social-media-rectangle" />
+                </div>
+                <div class="socialitems">
+                    <img (click)="whatsappShare()" src="../../../assets/static/whatsapp_rectangle.png" class="social-media-rectangle" />
+                </div>
+                <div class="socialitems">
+                    <img (click)="twitterShare()" src="../../../assets/static/twitter_rectangle.png" class="social-media-rectangle" />
+                </div>
+                <div class="socialitems">
+                    <img (click)="telegramShare()" src="../../../assets/static/telegram_rectangle.png" class="social-media-rectangle" />
+                </div>
+            </div>
+            <div class="yourcode">(Your Code: {{ this.profileInfo.referralcode }})</div>
+            <br>
+            <div style="size:small; font: bold"> Create your team of 10</div>
+            <div style="size:small;">
+                Invite upto 10 blockchain fans & sports fans to join your squad and earn 50 SPN tokens + 10% of their 1st deposit
+            </div>
+        </div>
+        <div class="totalreferrals box-container">
+            <div class="totalreferrals-row1">
+                <div class="shareyourlinktitle mt-4">
+                    <span class="shareyourlinktitle mt-2">Total Referral</span>
+                </div>
+                <div>
+                    {{this.profileInfo.totalreferrals}}
+                </div>
+            </div>
+            <div class="totalreferrals-row2">
+                <div class="totalreferrals-col-1">
+                    <div class="shareyourlinktitle mt-2">
+                        <span class="shareyourlinktitle width250">Total Rewards</span>
+                    </div>
+                    <div class="mt-2">
+                        {{this.profileInfo.totalrewards}} $SPN
+                    </div>
+                </div>
+                <!--
+                <div class="totalreferrals-col-2">
+                    <div class="shareyourlinktitle mt-2">
+                        <span class="shareyourlinktitle">Total Ratio</span>
+                    </div>
+                    <div class="mt-2">
+                        {{this.profileInfo.totalratio}} %
+                    </div>
+                </div>
+            -->
+            </div>
+        </div>
+    </div>
+</div>

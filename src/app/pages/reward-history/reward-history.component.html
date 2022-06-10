@@ -1,0 +1,36 @@
+<div class="row mt-4 mb-2 reward-container">
+  <div class="d-flex justify-content-start align-items-start">
+    <i class="fa fa-gift fa-2x margin-right-icon" aria-hidden="true"></i>
+    <!-- <i class="fa fa-user-plus fa-2x margin-right-icon"></i> -->
+    <div class="ml-2 sub-title">Reward History</div>
+  </div>
+  <div class="col-lg-12 mt-4">
+    <!-- {{rewardData.rewards | json}} -->
+    <table class="table">
+      <thead>
+        <tr>
+          <th scope="col">Activity Name</th>
+          <th class="hide-mobile-view" scope="col">Activity Date</th>
+          <th scope="col">Reward Token</th>
+          <th class="hide-mobile-view" scope="col">Status</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr *ngIf="isLoading">
+          <td colspan="4">
+            <div class="spinner-border spinner-border-sm" role="status">
+              <span class="sr-only">Loading...</span>
+            </div>
+            Loading Data...
+          </td>
+        </tr>
+        <tr *ngFor="let rewardItem of this.rewardData?.rewardhistory">
+          <td scope="row">{{ rewardItem.activityname }}</td>
+          <td class="hide-mobile-view">{{ rewardItem.date }}</td>
+          <td>{{ rewardItem.rewardtoken }}</td>
+          <td class="hide-mobile-view">{{ rewardItem.status }}</td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+</div>

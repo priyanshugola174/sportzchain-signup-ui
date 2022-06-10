@@ -1,0 +1,99 @@
+a.nav-link {
+    color: white;
+    text-decoration: underline;
+    cursor: pointer;
+}
+
+.title {
+    font-size: 50px;
+    font-weight: bold;
+}
+
+.sub-title {
+    font-size: 23px;
+    font-weight: 600;
+    font-family: 'Zonapro';
+}
+
+.sub-title-social {
+    margin: 25px 0 10px 0;
+    font-size: 23px;
+    font-weight: 600;
+}
+
+.ml-2 {
+    margin-left: 15px;
+}
+
+.form-container {
+    width: 100%;
+    background: radial-gradient( circle at 10% 10%, rgba(71, 71, 71, 0.35) 0%, rgba(48, 48, 48, 0.07) 100%);
+    border-radius: 10px;
+    /* position: absolute; */
+    box-sizing: border-box;
+    display: block;
+    padding: 25px;
+}
+
+.all-button {
+    background: -webkit-linear-gradient( left, rgb(232, 150, 46) 0%, rgb(228, 81, 49) 100%);
+    color: white;
+    width: 30%;
+    font-size: medium;
+    font-weight: 600;
+}
+
+.custom-help {
+    color: white !important;
+    font-size: 12px;
+    position: absolute;
+}
+
+.cursor-pointer {
+    cursor: pointer;
+}
+
+.tooltip-tutorial {
+    display: inline-block;
+    margin-left: 7.5em;
+}
+
+.tooltip-tutorial a {
+    color: white;
+    font-size: 12px;
+    cursor: pointer;
+}
+
+.displaylabel {
+    margin: 10px auto !important;
+}
+
+.update-button {
+    margin: 30px auto !important;
+}
+
+.mobile-view-center-ul {
+    font-family: 'Zonapro';
+}
+
+@media only screen and (max-width: 768px) {
+    .all-button {
+        width: 75%;
+    }
+    .form-container {
+        width: auto !important;
+        padding: 10px;
+    }
+    .sub-title-social {
+        margin: 35px 0 10px 0;
+        font-size: 23px;
+        font-weight: 600;
+    }
+    .displaylabel {
+        margin: 10px auto !important;
+    }
+    .tooltip-tutorial {
+        display: inline-block;
+        margin-left: 10px;
+    }
+}

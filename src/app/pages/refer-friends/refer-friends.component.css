@@ -1,0 +1,222 @@
+/*new*/
+.urlcopy{
+    padding-left: 6em;
+}
+.referralcontainer {
+    display: grid;
+    /* or inline-flex */
+    justify-content: center;
+    align-content: center;
+    grid-template-columns: 100%;
+    grid-template-rows: 20% 80%;
+}
+
+.row1 {
+    width: 100%;
+    margin: 30px 0px;
+}
+
+.row2 {
+    width: 100%;
+    display: grid;
+    grid-template-columns: 70% 30%;
+    padding-top: 40px;
+    padding-right: 40px;
+    column-gap: 3%;
+}
+
+.row1 .subheader {
+    display: grid;
+    justify-content: left;
+    font-weight: 500;
+    line-height: 1.2;
+    font-size: 1.75rem;
+    margin-left: 1em;
+    font-family: 'Zonapro';
+}
+
+.box-container {
+    background: radial-gradient(circle at 10% 10%, rgba(71, 71, 71, 0.35) 0%, rgba(71, 71, 71, 0.35) 100%);
+    border-radius: 5px;
+    display: grid;
+    justify-content: center;
+}
+
+.shareyourlink {
+    padding: 15px;
+}
+
+.totalreferrals {
+    padding: 15px;
+    display: grid;
+    grid-template-rows: auto;
+}
+
+.totalreferrals-row1 {
+    display: grid;
+    justify-items: center;
+}
+
+.totalreferrals-row2 {
+    display: grid;
+}
+
+.totalreferrals-col-1,
+.totalreferrals-col-2 {
+    display: grid;
+    grid-template-rows: 50% 50%;
+    justify-items: center;
+}
+
+.width250 {
+    width: 250px;
+}
+
+.shareyourlinktitle {
+    display: grid;
+    justify-content: center;
+    align-content: center;
+}
+
+.yourcode {
+    display: grid;
+    justify-content: center;
+    margin-top: 25px;
+}
+
+.row2 .custom-control {
+    width: 525px !important;
+}
+
+.socialbuttons {
+    display: flex;
+    margin: 10px 0px;
+    justify-content: center;
+}
+
+.socialitems {
+    margin: 0px 5px;
+}
+
+
+/*old*/
+
+.title {
+    font-size: 50px;
+    font-weight: bold;
+}
+
+.sub-title {
+    font-size: 23px;
+    font-weight: 600;
+}
+
+.reward-container {
+    background: radial-gradient(circle at 10% 10%, rgba(71, 71, 71, 0.35) 0%, rgba(71, 71, 71, 0.35) 100%);
+    border-radius: 5px;
+    padding: 15px;
+}
+
+.custom-control {
+    border: 2px solid rgb(255, 255, 255) !important;
+    background: none transparent !important;
+    color: rgb(255, 255, 255) !important;
+    width: 500px;
+    border-radius: 10px;
+    height: 30px;
+}
+
+.copy {
+    margin-left: 10px;
+    cursor: pointer;
+}
+
+.social-media-rectangle {
+    height: 46px;
+    width: 116px;
+    cursor: pointer;
+}
+
+.ml-2 {
+    margin-left: 20px;
+}
+
+.width80 {
+    width: 75%;
+}
+
+@media only screen and (max-width: 768px) {
+    .custom-control {
+        width: 180px;
+    }
+    .row1 .subheader {
+        font-size: 1.25rem;
+    }
+    .referralcontainer {
+        display: flex;
+        /* or inline-flex */
+        justify-content: center;
+        align-content: center;
+        flex-direction: column;
+    }
+    .row1 {
+        width: 100%;
+        margin: 30px 0px;
+    }
+    .row2 {
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        padding: 5px;
+        margin-top: 40px;
+    }
+    .row1 .subheader {
+        display: grid;
+        justify-content: left;
+        font-weight: 500;
+        line-height: 1.2;
+        font-size: 1.75rem;
+    }
+    .box-container {
+        background: radial-gradient(circle at 10% 10%, rgba(71, 71, 71, 0.35) 0%, rgba(71, 71, 71, 0.35) 100%);
+        border-radius: 5px;
+        display: grid;
+        justify-content: center;
+    }
+    .shareyourlink {
+        padding: 15px;
+    }
+    .totalreferrals {
+        padding: 15px;
+    }
+    .totalreferrals-col-1,
+    .width250 {
+        width: 10em;
+    }
+    .shareyourlinktitle {
+        display: grid;
+        justify-content: center;
+    }
+    .yourcode {
+        display: grid;
+        justify-content: center;
+        margin-top: 25px;
+    }
+    .row2 .custom-control {
+        width: 300px !important;
+        font-size: small;
+    }
+    .socialbuttons {
+        display: grid;
+        margin: 10px 0px;
+        grid-template-rows: auto;
+        justify-items: center;
+        row-gap: 3%;
+    }
+}
+
+@media only screen and (max-width: 991px) {
+    .custom-control {
+        width: 300px !important;
+    }
+}
